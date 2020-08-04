@@ -12,9 +12,6 @@ def karatsubaMulti(x, y):
     # convert to string
     xstr = str(x)
     ystr = str(y)
-    print(ystr)
-    print(xstr)
-    print(len(xstr))
     base = 10
     # check length
     if len(xstr) == 1 or len(ystr) == 1:
@@ -22,26 +19,24 @@ def karatsubaMulti(x, y):
     else:
         n = max(len(xstr), len(ystr))
         m = n // 2;
-        m +=1
         # split integer at m
         a = x // base**(m) #x1
         b = x % base**(m)  #x0
         c = y // base**(m) #y1
         d = y % base**(m)  #y0
 
-        z2 = karatsubaMulti(a, c)
+        z2 = karatsubaMulti(a,c)
         z1 = karatsubaMulti((a+b), (c+d))
-        z0 = karatsubaMulti(b, d)
+        z0 = karatsubaMulti(b,d)
         z1 = z1 - z2 - z0
-        end = ((z2*(base**(2*m))) + (z1*(base**m)) + z0)
-        print(((z2*(base**(2*m))) + (z1*(base**m)) + z0))
+
 
         #result
-        # return ((z2*(base**(2*m))) + (z1*(base**m)) + z0)
+        return ((z2*(base**(2*m))) + (z1*(base**m)) + z0)
 
 
-x = 12
-y = 52
+x = 3141592653589793238462643383279502884197169399375105820974944592
+y = 2718281828459045235360287471352662497757247093699959574966967627
 
-result = karatsubaMulti(x,  y)
+result = karatsubaMulti(x,y)
 print(result)
