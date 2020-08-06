@@ -42,8 +42,7 @@ order that inversion count is the maximum.
     link: https://www.geeksforgeeks.org/counting-inversions/
 
 #### My Code 
-![GitHub Logo](img/Screen Shot 2020-08-06 at 7.08.05 PM.png)
-
+<a href="https://ibb.co/s31SZCk"><img src="https://i.ibb.co/PCWpdM3/Screen-Shot-2020-08-06-at-7-08-05-PM.png" alt="Screen-Shot-2020-08-06-at-7-08-05-PM" border="0"></a>
 #### GeeksForGeeks Code
-![GitHub Logo](img/Screen Shot 2020-08-06 at 7.08.42 PM.png)
+<a href="https://ibb.co/Wcv3kTq"><img src="https://i.ibb.co/NL2394Q/Screen-Shot-2020-08-06-at-7-08-42-PM.png" alt="Screen-Shot-2020-08-06-at-7-08-42-PM" border="0"></a>
       
