@@ -42,10 +42,8 @@ order that inversion count is the maximum.
     link: https://www.geeksforgeeks.org/counting-inversions/
 
 #### My Code 
-Format: ![Alt Text](https://ibb.co/s31SZCk)
-
+![GitHub Logo](/Users/amr/Downloads/Coursera/Stanford-Algorithms/gitup/img/Screen Shot 2020-08-06 at 7.08.05 PM.png)
 
 #### GeeksForGeeks Code
-
-Format: ![Alt Text](https://ibb.co/Wcv3kTq)
+![GitHub Logo](/Users/amr/Downloads/Coursera/Stanford-Algorithms/gitup/img/Screen Shot 2020-08-06 at 7.08.42 PM.png)
       
