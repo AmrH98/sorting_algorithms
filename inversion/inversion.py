@@ -1,59 +1,96 @@
-# merge to count inversions
-def mergeSort(array,sortedArray,left,right):
-    mid = (right // 2)
-    inversionCount = 0
+import timeit
+
+start = timeit.default_timer()
+
+def mergeSort(arr, n):
+    # A temp_arr is created to store 
+    # sorted array in merge function 
+    temp_arr = [0]*n
+    return _mergeSort(arr, temp_arr, 0, n-1)
+
+# This Function will use MergeSort to count inversions 
+
+def _mergeSort(arr, temp_arr, left, right):
+
+    # A variable inv_count is used to store 
+    # inversion counts in each recursive call 
+
+    inv_count = 0
+
+    # We will make a recursive call if and only if 
+    # we have more than one elements 
 
     if left < right:
-        # count inversion left subarray
-        inversionCount += mergeSort(array,sortedArray,left,mid)
-        #  count inversion right subarray
-        inversionCount += mergeSort(array,sortedArray,mid+1,right-1)
-        # merge both sub arrays
-        inversionCount += merge(array,left,sortedArray,mid,right)
-    return inversionCount
 
-def merge(array,left,sortedArray, mid,right):
-    # indices or left, right and sorted subarray
-    i = left
-    j = mid + 1
-    k = left
-    # temp array
-    inversionCount = 0
+        # mid is calculated to divide the array into two subarrays 
+        # Floor division is must in case of python 
 
-    while i <= mid or j <= right:
-        # no inversion
-        if array[i] <= array[j]:
-            sortedArray[k] = array[i]
-            i+=1
-            k+=1
+        mid = (left + right)//2
+
+        # It will calculate inversion counts in the left subarray 
+
+        inv_count += _mergeSort(arr, temp_arr, left, mid)
+
+        # It will calculate inversion counts in right subarray 
+
+        inv_count += _mergeSort(arr, temp_arr, mid + 1, right)
+
+        # It will merge two subarrays in a sorted subarray 
+
+        inv_count += merge(arr, temp_arr, left, mid, right)
+    return inv_count
+
+# This function will merge two subarrays in a single sorted subarray 
+def merge(arr, temp_arr, left, mid, right):
+    i = left     # Starting index of left subarray 
+    j = mid + 1 # Starting index of right subarray 
+    k = left     # Starting index of to be sorted subarray 
+    inv_count = 0
+
+    # Conditions are checked to make sure that i and j don't exceed their 
+    # subarray limits. 
+
+    while i <= mid and j <= right:
+
+        # There will be no inversion if arr[i] <= arr[j] 
+
+        if arr[i] <= arr[j]:
+            temp_arr[k] = arr[i]
+            k += 1
+            i += 1
         else:
-    # count inversion
-            inversionCount+=1
-            sortedArray[k] = array[j]
-            j+=1
-            k+=1
+            # Inversion will occur. 
+            temp_arr[k] = arr[j]
+            inv_count += (mid-i + 1)
+            k += 1
+            j += 1
+
+    # Copy the remaining elements of left subarray into temporary array 
     while i <= mid:
-        sortedArray[k] = array[i]
+        temp_arr[k] = arr[i]
         k += 1
         i += 1
 
-    # Copy the remaining elements of right subarray into temporary array
+    # Copy the remaining elements of right subarray into temporary array 
     while j <= right:
-        sortedArray[k] = array[j]
+        temp_arr[k] = arr[j]
         k += 1
         j += 1
-    return inversionCount
 
+    # Copy the sorted subarray into Original array 
+    for loop_var in range(left, right + 1):
+        arr[loop_var] = temp_arr[loop_var]
 
-# f = open('/Users/amr/Downloads/Coursera/Stanford-Algorithms/gitup/inversion/Test.txt', 'r')
-# testFile = f.read().split('\n')
-testFile = [1, 20, 6, 4, 5]
+    return inv_count
 
-length = len(testFile)
-sortedArray = [0]*(length)
-inversions = mergeSort(testFile,sortedArray,0,length)
-print("Value = ", inversions)
+# Driver Code 
+# Given array is
+f = open('Test.txt', 'r')
+arr = f.read().split('\n')
+n = len(arr)
+result = mergeSort(arr, n)
+print("Number of inversions are", result)
 
+stop = timeit.default_timer()
 
-
-
+print('Time: ', stop - start)

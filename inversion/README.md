@@ -33,6 +33,17 @@ order that inversion count is the maximum.
 
 ### Complexity Analysis:
   Time Complexity:
-   - O(n^2), Two nested loops are needed to traverse the array from start to end so the Time complexity is O(n^2)
-  - Space Compelxity: O(1), No extra space is required.
+   - Runtime of subroutine: O(n) + O(n) = O(n)
+   - Merge runtime O(nlog(n)) 
+   
+### Status 
+    - Ongoing 
+    - Finding different solution for Inversion counting with best time complextity
+    link: https://www.geeksforgeeks.org/counting-inversions/
+
+#### My Code 
+![GitHub Logo](/Users/amr/Downloads/Coursera/README IMG/Screen Shot 2020-08-06 at 7.08.05 PM.png)
+
+#### GeeksForGeeks Code
+![GitHub Logo](/Users/amr/Downloads/Coursera/README IMG/Screen Shot 2020-08-06 at 7.08.42 PM.png)
       
