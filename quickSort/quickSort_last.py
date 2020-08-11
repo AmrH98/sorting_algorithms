@@ -18,7 +18,6 @@ def quickSort(arr, low, high):
         quickSort(arr, low, pi - 1)
         quickSort(arr, pi+1, high)
 
-array = [10, 7, 8, 9, 1, 5]
 
 f = open('testFile_quickSort.txt', 'r')
 testFile = f.read().split('\n')
