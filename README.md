@@ -12,4 +12,3 @@
      - Median as pivot.
 ----
 
-[GitHub](http://github.com)
