@@ -10,7 +10,7 @@
 #### Types
 
 - Always pick first element as pivot.
-- Always pick last element as pivot (implemented below)
+- Always pick last element as pivot.
  - Pick a random element as pivot.
  - Pick median as pivot.
 
@@ -36,7 +36,8 @@
         T(n) = T(n/9) + T(9n/10) + \theta(n)
  
  ##### Pseudocode
- 
+###### Pivot first position 
+
         Partition(A[],L,R) 
         {
             pivot = A[L]
