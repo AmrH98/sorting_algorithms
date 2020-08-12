@@ -1,5 +1,5 @@
 import timeit
-
+# Geeksforgeeks code
 start = timeit.default_timer()
 
 def mergeSort(arr, n):

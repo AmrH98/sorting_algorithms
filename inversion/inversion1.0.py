@@ -1,5 +1,5 @@
 import timeit
-
+# My initial code
 start = timeit.default_timer()
 
 
