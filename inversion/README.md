@@ -37,10 +37,13 @@ order that inversion count is the maximum.
    - Merge runtime O(nlog(n)) 
    
 ### Status 
-    - Ongoing 
+    - Done ( check screenshot below and inversionmain.py file )
     - Finding different solution for Inversion counting with best time complextity
     link: https://www.geeksforgeeks.org/counting-inversions/
 
+#### My Code after some edits
+
+<a href="https://ibb.co/30gS9Wv"><img src="https://i.ibb.co/p3Y4BZQ/Screen-Shot-2020-08-12-at-6-27-21-PM.png" alt="Screen-Shot-2020-08-12-at-6-27-21-PM" border="0"></a>
 #### My Code 
 - Less inversions 
 

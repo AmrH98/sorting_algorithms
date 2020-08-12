@@ -39,7 +39,7 @@ def merge(left, right):
 f = open('Test.txt', 'r')
 testFile = f.read().split('\n')
 x = mergeSort(testFile)
-print("Sorted Array: ", x[0])
+
 print("Inversions: ", x[1])
 
 #Your statements here
