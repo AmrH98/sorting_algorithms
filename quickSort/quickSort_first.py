@@ -20,10 +20,11 @@ def quickSort(arr, low, high):
 
 
 
+
 f = open('testFile_quickSort.txt', 'r')
 testFile = f.read().split('\n')
 
-
+testFile = [10, 2, 5, 8, 1]
 
 length = len(testFile)
 quickSort(testFile, 0, length-1)
