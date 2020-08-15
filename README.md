@@ -9,6 +9,6 @@
     - First element as pivot.
     - Last element as pivot.
     - Random element as pivot.
-     - Median as pivot.
+    - Median as pivot.
 ----
 
